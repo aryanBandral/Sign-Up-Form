@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1.7rem;
+  }
+  
+body {
+    background-color: beige;
+    display: grid;
+    grid-template: auto 1fr auto / 1fr 2fr;
+    grid-template-areas: 
+      "header header"
+      "main main"
+      "footer footer";
+    height: clamp(665px, 100vh, 100vh);
+}
+
+header {
+    grid-area: header;
+    padding: 1rem;
+    margin: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.651);
+    padding: 0.5em 0.5em 0.5em;
+    border-radius: 20px;
+    text-align: center;
+    color: rgb(74, 201, 0);
+}
+
+h1 {
+    text-align: center;
+}
+
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template:1fr /  1fr 2fr;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(32, 87, 0);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0.5em 0.5em 0.5em;
+    background-image: url(./assets/hero-img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin: 0.5em;
+    background-color: rgba(0, 0, 0, 0.555);
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/form.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    border-radius: 20px;
+    margin: 0.5em 0.5em 0.5em;
+}
+
+.form-section h2 {
+    font-weight: 500;
+    width: 65ch;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.555);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 65ch;
+    gap: 1rem;
+    background-color: rgba(231, 195, 123, 0.35);
+    padding: 1rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+form p {
+    text-align: center;
+}
+
+form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+fieldset legend {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.form-control {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: .3rem;
+}
+
+.form-control label {
+    font-weight: bold;
+}
+
+.form-control input {
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-left: .3rem;
+    font-weight: normal;
+    letter-spacing: .08rem;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+}
+
+.form-control input:focus {
+    outline: none;
+    background-color:rgba(172, 211, 121, 0.575);
+    box-shadow: 0px 0px 25px rgb(0, 0, 0);
+}
+
+.form-control span {
+    font-weight: bold;
+    padding-left: 1rem;
+    border-radius: 20px;
+}
+
+input:focus::placeholder {
+    color: rgba(255, 250, 242, 0);
+}
+
+input:valid + span::before {
+    content: '✓';
+    padding-right: .5rem;
+}
+
+input:invalid + span::before {
+    content: '⚠️';
+    padding-right: .5rem;
+}
+
+input:valid, input:valid + span{
+    background-color: rgba(113, 255, 113, 0.308);
+    font-weight: bold;
+}
+
+input:invalid, input:invalid + span{
+    background-color: rgba(255, 122, 98, 0.315);
+}
+  
+input:placeholder-shown, input:placeholder-shown + span, input:placeholder-shown + span::before, input:placeholder-shown + span::after {
+    background-color: transparent;
+    content: " ";
+}
+  
+input:placeholder-shown {
+    background-color: rgba(245, 245, 220, 0.493);
+}
+
+button {
+    align-self: center;
+    width: 20%;
+    text-decoration:none;
+    background-color: rgba(245, 245, 220, 0.692);
+    border-radius: 20px;
+    border: none;
+    border-width: 3px;
+}
+
+button:hover  {
+    background-color: rgba(245, 245, 220, 0.822);
+    box-shadow: 0px 0px 25px rgb(0, 0, 0);
+}
